@@ -27,12 +27,13 @@ defmodule SiteGen do
 		new_directory(options)
 		|> yarnify
 		|> install_deps
-		|> start_app
+		|> done
 	end
 
+	"""
+	working on making this work :(
+	"""
 	def start_app(name) do
-		System.cmd "ls", ['-a']
-		System.halt(0)
 		System.cmd "cd", [name]	
 		System.cmd "yarn", ["start"]	
 	end 
